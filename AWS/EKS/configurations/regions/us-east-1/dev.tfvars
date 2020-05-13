@@ -1,9 +1,9 @@
 environment = "dev"
 region = "us-east-1"
-s3_bucket = "nataliya-terraform-eks"         #Will be used to set backend.tf
-s3_folder_project = "application"            #Will be used to set backend.tf
-s3_folder_region = "us-east-1"               #Will be used to set backend.tf
-s3_folder_type = "state"                     #Will be used to set backend.tf
+s3_bucket = "nataliya-terraform-eks"              #Will be used to set backend.tf
+s3_folder_project = "application"                 #Will be used to set backend.tf
+s3_folder_region = "us-east-1"                    #Will be used to set backend.tf
+s3_folder_type = "state"                          #Will be used to set backend.tf
 s3_tfstate_file = "infrastructure.tfstate.json"   #Will be used to set backend.tf
 
 
