@@ -1,8 +1,7 @@
 resource "aws_security_group" "allow_traffic" {
-  name         = "${var.sg_name}"
-  description  = "Allow TLS inbound traffic"
-  vpc_id       = "${aws_vpc.main.id}"
-
+  name        = "${var.sg_name}"
+  description = "Allow TLS inbound traffic"
+  vpc_id      = "${aws_vpc.main.id}"
 
   ingress {
     description = "TLS from VPC"
@@ -20,7 +19,6 @@ resource "aws_security_group" "allow_traffic" {
     cidr_blocks = ["${var.ingress_cidr_blocks}"]
   }
 
-
   egress {
     from_port   = 0
     to_port     = 0
@@ -28,5 +26,5 @@ resource "aws_security_group" "allow_traffic" {
     cidr_blocks = ["${var.egress_cidr_blocks}"]
   }
 
-  tags          = "${var.tags}"
+  tags = "${merge(var.tags, map("Name","httpd_sg"))}"
 }

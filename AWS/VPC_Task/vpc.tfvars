@@ -24,7 +24,8 @@ nat_cidr_block           = "0.0.0.0/0"
 ig_cidr_block            = "0.0.0.0/0"
 
 # ec2 instance
-ami                      = "ami-0323c3dd2da7fb37d"
+owner_name               = "amazon"
+image_value              = "amzn2-ami-hvm-2.0.20200406.0-x86_64-ebs*"
 instance_type            = "t2.micro"
 
 # security group
